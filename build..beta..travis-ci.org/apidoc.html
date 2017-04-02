@@ -1,0 +1,2335 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/oliver-moran/jimp#readme"
+
+    >jimp (v0.2.27)</a>
+</h1>
+<h4>An image processing library written entirely in JavaScript (i.e. zero external or native dependencies).</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jimp">module jimp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.diff">
+            function <span class="apidocSignatureSpan">jimp.</span>diff
+            <span class="apidocSignatureSpan">(img1, img2, threshold)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.distance">
+            function <span class="apidocSignatureSpan">jimp.</span>distance
+            <span class="apidocSignatureSpan">(img1, img2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.intToRGBA">
+            function <span class="apidocSignatureSpan">jimp.</span>intToRGBA
+            <span class="apidocSignatureSpan">(i, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.limit255">
+            function <span class="apidocSignatureSpan">jimp.</span>limit255
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.loadFont">
+            function <span class="apidocSignatureSpan">jimp.</span>loadFont
+            <span class="apidocSignatureSpan">(file, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.phash">
+            function <span class="apidocSignatureSpan">jimp.</span>phash
+            <span class="apidocSignatureSpan">(size, smallerSize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.read">
+            function <span class="apidocSignatureSpan">jimp.</span>read
+            <span class="apidocSignatureSpan">(src, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize">
+            function <span class="apidocSignatureSpan">jimp.</span>resize
+            <span class="apidocSignatureSpan">(widthOriginal, heightOriginal, targetWidth, targetHeight, blendAlpha, interpolationPass, resizeCallback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.rgbaToInt">
+            function <span class="apidocSignatureSpan">jimp.</span>rgbaToInt
+            <span class="apidocSignatureSpan">(r, g, b, a, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>AUTO</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>HORIZONTAL_ALIGN_CENTER</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>HORIZONTAL_ALIGN_LEFT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>HORIZONTAL_ALIGN_RIGHT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>PNG_FILTER_AUTO</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>PNG_FILTER_AVERAGE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>PNG_FILTER_NONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>PNG_FILTER_PAETH</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>PNG_FILTER_SUB</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>PNG_FILTER_UP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>VERTICAL_ALIGN_BOTTOM</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>VERTICAL_ALIGN_MIDDLE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.</span>VERTICAL_ALIGN_TOP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jimp.</span>phash.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jimp.</span>resize.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jimp.</span>resize2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>FONT_SANS_128_BLACK</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>FONT_SANS_128_WHITE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>FONT_SANS_16_BLACK</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>FONT_SANS_16_WHITE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>FONT_SANS_32_BLACK</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>FONT_SANS_32_WHITE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>FONT_SANS_64_BLACK</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>FONT_SANS_64_WHITE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>FONT_SANS_8_BLACK</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>FONT_SANS_8_WHITE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>MIME_BMP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>MIME_JPEG</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>MIME_PNG</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>RESIZE_BEZIER</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>RESIZE_BICUBIC</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>RESIZE_BILINEAR</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>RESIZE_HERMITE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jimp.</span>RESIZE_NEAREST_NEIGHBOR</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jimp.phash">module jimp.phash</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.phash.phash">
+            function <span class="apidocSignatureSpan">jimp.</span>phash
+            <span class="apidocSignatureSpan">(size, smallerSize)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jimp.phash.prototype">module jimp.phash.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.phash.prototype.distance">
+            function <span class="apidocSignatureSpan">jimp.phash.prototype.</span>distance
+            <span class="apidocSignatureSpan">(s1, s2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.phash.prototype.getHash">
+            function <span class="apidocSignatureSpan">jimp.phash.prototype.</span>getHash
+            <span class="apidocSignatureSpan">(img)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.phash.prototype.</span>size</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jimp.phash.prototype.</span>smallerSize</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jimp.resize">module jimp.resize</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.resize">
+            function <span class="apidocSignatureSpan">jimp.</span>resize
+            <span class="apidocSignatureSpan">(widthOriginal, heightOriginal, targetWidth, targetHeight, blendAlpha, interpolationPass, resizeCallback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jimp.resize.prototype">module jimp.resize.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.bypassResizer">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>bypassResizer
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.configurePasses">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>configurePasses
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.generateFloatBuffer">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>generateFloatBuffer
+            <span class="apidocSignatureSpan">(bufferLength)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.generateUint8Buffer">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>generateUint8Buffer
+            <span class="apidocSignatureSpan">(bufferLength)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.initialize">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>initialize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.initializeFirstPassBuffers">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>initializeFirstPassBuffers
+            <span class="apidocSignatureSpan">(BILINEARAlgo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.initializeSecondPassBuffers">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>initializeSecondPassBuffers
+            <span class="apidocSignatureSpan">(BILINEARAlgo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.resize">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resize
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.resizeHeightInterpolated">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeHeightInterpolated
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.resizeHeightRGB">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeHeightRGB
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.resizeHeightRGBA">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeHeightRGBA
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.resizeWidthInterpolatedRGB">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeWidthInterpolatedRGB
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.resizeWidthInterpolatedRGBA">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeWidthInterpolatedRGBA
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.resizeWidthRGB">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeWidthRGB
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize.prototype.resizeWidthRGBA">
+            function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeWidthRGBA
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jimp.resize2">module jimp.resize2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize2._interpolate2D">
+            function <span class="apidocSignatureSpan">jimp.resize2.</span>_interpolate2D
+            <span class="apidocSignatureSpan">(src, dst, options, interpolate)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize2.bezierInterpolation">
+            function <span class="apidocSignatureSpan">jimp.resize2.</span>bezierInterpolation
+            <span class="apidocSignatureSpan">(src, dst, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize2.bicubicInterpolation">
+            function <span class="apidocSignatureSpan">jimp.resize2.</span>bicubicInterpolation
+            <span class="apidocSignatureSpan">(src, dst, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize2.bilinearInterpolation">
+            function <span class="apidocSignatureSpan">jimp.resize2.</span>bilinearInterpolation
+            <span class="apidocSignatureSpan">(src, dst, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize2.hermiteInterpolation">
+            function <span class="apidocSignatureSpan">jimp.resize2.</span>hermiteInterpolation
+            <span class="apidocSignatureSpan">(src, dst, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.resize2.nearestNeighbor">
+            function <span class="apidocSignatureSpan">jimp.resize2.</span>nearestNeighbor
+            <span class="apidocSignatureSpan">(src, dst, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jimp" id="apidoc.module.jimp">module jimp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.diff" id="apidoc.element.jimp.diff">
+        function <span class="apidocSignatureSpan">jimp.</span>diff
+        <span class="apidocSignatureSpan">(img1, img2, threshold)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">diff = function (img1, img2, threshold) {
+    if (&#x22;object&#x22; != typeof img1 || img1.constructor != Jimp || &#x22;object&#x22; != typeof img2 || img2.constructor != Jimp)
+        return throwError.call(this, &#x22;img1 and img2 must be an Jimp images&#x22;);
+
+    if (img1.bitmap.width != img2.bitmap.width || img1.bitmap.height != img2.bitmap.height) {
+        switch (img1.bitmap.width * img1.bitmap.height &#x3e; img2.bitmap.width * img2.bitmap.height) {
+            case true: // img1 is bigger
+                img1 = img1.clone().resize(img2.bitmap.width, img2.bitmap.height);
+                break;
+            default:
+                // img2 is bigger (or they are the same in area)
+                img2 = img2.clone().resize(img1.bitmap.width, img1.bitmap.height);
+                break;
+        }
+    }
+
+    threshold = threshold || 0.1;
+    if (&#x22;number&#x22; != typeof threshold || threshold &#x3c; 0 || threshold &#x3e; 1)
+        return throwError.call(this, &#x22;threshold must be a number between 0 and 1&#x22;);
+
+    var diff = new Jimp(img1.bitmap.width, img1.bitmap.height, 0xFFFFFFFF);
+
+    var numDiffPixels = PixelMatch(
+        img1.bitmap.data,
+        img2.bitmap.data,
+        diff.bitmap.data,
+        diff.bitmap.width,
+        diff.bitmap.height,
+        {threshold: threshold}
+    );
+
+    return {
+        percent: numDiffPixels / (diff.bitmap.width * diff.bitmap.height),
+        image: diff
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+Jimp.distance(image1, image2); // returns a number 0-1, where 0 means the two images are perceived to be identical
+```
+
+Jimp also allows the diffing of two Jimp images using [PixelMatch](https://github.com/mapbox/pixelmatch) as follows:
+
+```js
+var diff = Jimp.<span class="apidocCodeKeywordSpan">diff</span>(image1, image2, threshold); // threshold ranges 0-1 (default: 0.
+1)
+diff.image;   // a Jimp image showing differences
+diff.percent; // the proportion of different pixels (0-1), where 0 means the images are pixel identical
+```
+
+Using a mix of hamming distance and pixel diffing to comare images, the following code has a 99% success rate of detecting the same
+ image from a random sample (with 1% false positives). The test this figure is drawn from attempts to match each image from a sample
+ of 120 PNGs against 120 corresponing JPEGs saved at a quality setting of 60.
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.distance" id="apidoc.element.jimp.distance">
+        function <span class="apidocSignatureSpan">jimp.</span>distance
+        <span class="apidocSignatureSpan">(img1, img2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">distance = function (img1, img2) {
+    var phash = new ImagePHash();
+    var hash1 = phash.getHash(img1);
+    var hash2 = phash.getHash(img2);
+    return phash.distance(hash1, hash2);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+There are 18,446,744,073,709,551,615 unique hashes. The hamming distance between the binary representation of these hashes can be
+ used to find similar-looking images.
+
+To calculate the hamming distance between two Jimp images based on their perceptual hash use:
+
+```js
+Jimp.<span class="apidocCodeKeywordSpan">distance</span>(image1, image2); // returns a number 0-1, where 0 means the two images
+are perceived to be identical
+```
+
+Jimp also allows the diffing of two Jimp images using [PixelMatch](https://github.com/mapbox/pixelmatch) as follows:
+
+```js
+var diff = Jimp.diff(image1, image2, threshold); // threshold ranges 0-1 (default: 0.1)
+diff.image;   // a Jimp image showing differences
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.intToRGBA" id="apidoc.element.jimp.intToRGBA">
+        function <span class="apidocSignatureSpan">jimp.</span>intToRGBA
+        <span class="apidocSignatureSpan">(i, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">intToRGBA = function (i, cb){
+    if (&#x22;number&#x22; != typeof i)
+        return throwError.call(this, &#x22;i must be a number&#x22;, cb);
+
+    var rgba = {}
+    rgba.r = Math.floor(i / Math.pow(256, 3));
+    rgba.g = Math.floor((i - (rgba.r * Math.pow(256, 3))) / Math.pow(256, 2));
+    rgba.b = Math.floor((i - (rgba.r * Math.pow(256, 3)) - (rgba.g * Math.pow(256, 2))) / Math.pow(256, 1));
+    rgba.a = Math.floor((i - (rgba.r * Math.pow(256, 3)) - (rgba.g * Math.pow(256, 2)) - (rgba.b * Math.pow(256, 1))) / Math.pow
+(256, 0));
+
+    if (isNodePattern(cb)) return cb.call(this, null, rgba);
+    else return rgba;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+image.setPixelColor(hex, x, y); // sets the colour of that pixel
+```
+
+Two static helper functions exist to convert RGBA values into single integer (hex) values:
+
+```js
+Jimp.rgbaToInt(r, g, b, a); // e.g. converts 255, 255, 255, 255 to 0xFFFFFFFF
+Jimp.<span class="apidocCodeKeywordSpan">intToRGBA</span>(hex);        // e.g. converts 0xFFFFFFFF to {r: 255, g: 255, b: 255, a
+:255}
+```
+
+### Creating new images ###
+
+If you want to begin with an empty Jimp image, you can call the Jimp constructor passing the width and height of the image to create
+ and (optionally) a Node-style callback:
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.limit255" id="apidoc.element.jimp.limit255">
+        function <span class="apidocSignatureSpan">jimp.</span>limit255
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">limit255 = function (n) {
+    n = Math.max(n, 0);
+    n = Math.min(n, 255);
+    return n;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    var a = bg.a + fg.a - bg.a * fg.a;
+
+    var r = ((fg.r * fg.a) + (bg.r * bg.a) * (1 - fg.a)) / a;
+    var g = ((fg.g * fg.a) + (bg.g * bg.a) * (1 - fg.a)) / a;
+    var b = ((fg.b * fg.a) + (bg.b * bg.a) * (1 - fg.a)) / a;
+
+    that.bitmap.data[dstIdx + 0] = Jimp.<span class="apidocCodeKeywordSpan">limit255</span>(r * 255);
+    that.bitmap.data[dstIdx + 1] = Jimp.limit255(g * 255);
+    that.bitmap.data[dstIdx + 2] = Jimp.limit255(b * 255);
+    that.bitmap.data[dstIdx + 3] = Jimp.limit255(a * 255);
+});
+
+if (isNodePattern(cb)) return cb.call(this, null, this);
+else return this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.loadFont" id="apidoc.element.jimp.loadFont">
+        function <span class="apidocSignatureSpan">jimp.</span>loadFont
+        <span class="apidocSignatureSpan">(file, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadFont = function (file, cb) {
+    if (&#x22;string&#x22; != typeof file)
+        return throwError.call(this, &#x22;file must be a string&#x22;, cb);
+
+    var that = this;
+
+    return new Promise(function (resolve, reject) {
+        cb = cb || function(err, font) {
+            if (err) reject(err);
+            else resolve(font);
+        }
+
+        BMFont(file, function(err, font) {
+            var chars = {}, kernings = {};
+
+            if (err) return throwError.call(that, err, cb);
+
+            for (var i = 0; i &#x3c; font.chars.length; i++) {
+                chars[String.fromCharCode(font.chars[i].id)] = font.chars[i];
+            }
+
+            for (var i = 0; i &#x3c; font.kernings.length; i++) {
+                var firstString = String.fromCharCode(font.kernings[i].first);
+                kernings[firstString] = kernings[firstString] || {};
+                kernings[firstString][String.fromCharCode(font.kernings[i].second)] = font.kernings[i].amount;
+            }
+
+            loadPages(Path.dirname(file), font.pages).then(function (pages) {
+                cb(null, {
+                    chars: chars,
+                    kernings: kernings,
+                    pages: pages,
+                    common: font.common,
+                    info: font.info
+                });
+            });
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Writing text ###
+
+Jimp supports basic typography using BMFont format (.fnt) [bitmap fonts](https://en.wikipedia.org/wiki/Bitmap_fonts):
+
+```js
+Jimp.<span class="apidocCodeKeywordSpan">loadFont</span>( path ).then(function (font) { // load font from .fnt file
+    image.print(font, x, y, str);        // print a message on an image
+    image.print(font, x, y, str, width); // print a message on an image with text wrapped at width
+});
+
+Jimp.loadFont( path, cb ); // using a callback pattern
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.phash" id="apidoc.element.jimp.phash">
+        function <span class="apidocSignatureSpan">jimp.</span>phash
+        <span class="apidocSignatureSpan">(size, smallerSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImagePHash(size, smallerSize) {
+    this.size = this.size || size;
+    this.smallerSize = this.smallerSize || smallerSize;
+    initCoefficients(this.size);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.read" id="apidoc.element.jimp.read">
+        function <span class="apidocSignatureSpan">jimp.</span>read
+        <span class="apidocSignatureSpan">(src, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (src, cb) {
+    var promise = new Promise(
+        function(resolve, reject) {
+            cb = cb || function(err, image) {
+                if (err) reject(err);
+                else resolve(image);
+            }
+            if (&#x22;string&#x22; != typeof src &#x26;&#x26; (&#x22;object&#x22; != typeof src || !Buffer.isBuffer(src)))
+                return throwError.call(this, &#x22;src must be a string or a Buffer&#x22;, cb);
+            var img = new Jimp(src, cb);
+        }
+    );
+    return promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Example usage:
+
+```js
+var Jimp = require(&#x22;jimp&#x22;);
+
+// open a file called &#x22;lenna.png&#x22;
+Jimp.<span class="apidocCodeKeywordSpan">read</span>(&#x22;lenna.png&#x22;, function (err, lenna) {
+    if (err) throw err;
+    lenna.resize(256, 256)            // resize
+         .quality(60)                 // set JPEG quality
+         .greyscale()                 // set greyscale
+         .write(&#x22;lena-small-bw.jpg&#x22;); // save
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize" id="apidoc.element.jimp.resize">
+        function <span class="apidocSignatureSpan">jimp.</span>resize
+        <span class="apidocSignatureSpan">(widthOriginal, heightOriginal, targetWidth, targetHeight, blendAlpha, interpolationPass, resizeCallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Resize(widthOriginal, heightOriginal, targetWidth, targetHeight, blendAlpha, interpolationPass, resizeCallback) {
+    this.widthOriginal = Math.abs(parseInt(widthOriginal) || 0);
+    this.heightOriginal = Math.abs(parseInt(heightOriginal) || 0);
+    this.targetWidth = Math.abs(parseInt(targetWidth) || 0);
+    this.targetHeight = Math.abs(parseInt(targetHeight) || 0);
+    this.colorChannels = (!!blendAlpha) ? 4 : 3;
+    this.interpolationPass = !!interpolationPass;
+    this.resizeCallback = (typeof resizeCallback == &#x22;function&#x22;) ? resizeCallback : function (returnedArray) {};
+    this.targetWidthMultipliedByChannels = this.targetWidth * this.colorChannels;
+    this.originalWidthMultipliedByChannels = this.widthOriginal * this.colorChannels;
+    this.originalHeightMultipliedByChannels = this.heightOriginal * this.colorChannels;
+    this.widthPassResultSize = this.targetWidthMultipliedByChannels * this.heightOriginal;
+    this.finalResultSize = this.targetWidthMultipliedByChannels * this.targetHeight;
+    this.initialize();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var Jimp = require(&#x22;jimp&#x22;);
+
+// open a file called &#x22;lenna.png&#x22;
+Jimp.read(&#x22;lenna.png&#x22;, function (err, lenna) {
+    if (err) throw err;
+    lenna.<span class="apidocCodeKeywordSpan">resize</span>(256, 256)            // resize
+         .quality(60)                 // set JPEG quality
+         .greyscale()                 // set greyscale
+         .write(&#x22;lena-small-bw.jpg&#x22;); // save
+});
+```
+
+Using promises:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.rgbaToInt" id="apidoc.element.jimp.rgbaToInt">
+        function <span class="apidocSignatureSpan">jimp.</span>rgbaToInt
+        <span class="apidocSignatureSpan">(r, g, b, a, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rgbaToInt = function (r, g, b, a, cb){
+    if (&#x22;number&#x22; != typeof r || &#x22;number&#x22; != typeof g || &#x22;number&#x22; != typeof b || &#x22;number&#x22; != typeof a)
+        return throwError.call(this, &#x22;r, g, b and a must be numbers&#x22;, cb);
+    if (r &#x3c; 0 || r &#x3e; 255)
+        return throwError.call(this, &#x22;r must be between 0 and 255&#x22;, cb);
+    if (g &#x3c; 0 || g &#x3e; 255)
+        throwError.call(this, &#x22;g must be between 0 and 255&#x22;, cb);
+    if (b &#x3c; 0 || b &#x3e; 255)
+        return throwError.call(this, &#x22;b must be between 0 and 255&#x22;, cb);
+    if (a &#x3c; 0 || a &#x3e; 255)
+        return throwError.call(this, &#x22;a must be between 0 and 255&#x22;, cb);
+
+    var i = (r * Math.pow(256, 3)) + (g * Math.pow(256, 2)) + (b *  Math.pow(256, 1)) + (a * Math.pow(256, 0));
+
+    if (isNodePattern(cb)) return cb.call(this, null, i);
+    else return i;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+image.getPixelColor(x, y);      // returns the colour of that pixel e.g. 0xFFFFFFFF
+image.setPixelColor(hex, x, y); // sets the colour of that pixel
+```
+
+Two static helper functions exist to convert RGBA values into single integer (hex) values:
+
+```js
+Jimp.<span class="apidocCodeKeywordSpan">rgbaToInt</span>(r, g, b, a); // e.g. converts 255, 255, 255, 255 to 0xFFFFFFFF
+Jimp.intToRGBA(hex);        // e.g. converts 0xFFFFFFFF to {r: 255, g: 255, b: 255, a:255}
+```
+
+### Creating new images ###
+
+If you want to begin with an empty Jimp image, you can call the Jimp constructor passing the width and height of the image to create
+ and (optionally) a Node-style callback:
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jimp.phash" id="apidoc.module.jimp.phash">module jimp.phash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.phash.phash" id="apidoc.element.jimp.phash.phash">
+        function <span class="apidocSignatureSpan">jimp.</span>phash
+        <span class="apidocSignatureSpan">(size, smallerSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImagePHash(size, smallerSize) {
+    this.size = this.size || size;
+    this.smallerSize = this.smallerSize || smallerSize;
+    initCoefficients(this.size);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jimp.phash.prototype" id="apidoc.module.jimp.phash.prototype">module jimp.phash.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.phash.prototype.distance" id="apidoc.element.jimp.phash.prototype.distance">
+        function <span class="apidocSignatureSpan">jimp.phash.prototype.</span>distance
+        <span class="apidocSignatureSpan">(s1, s2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">distance = function (s1, s2) {
+    var counter = 0;
+    for (var k = 0; k &#x3c; s1.length; k++) {
+        if (s1[k] != s2[k]) {
+            counter++;
+        }
+    }
+    return (counter / s1.length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+There are 18,446,744,073,709,551,615 unique hashes. The hamming distance between the binary representation of these hashes can be
+ used to find similar-looking images.
+
+To calculate the hamming distance between two Jimp images based on their perceptual hash use:
+
+```js
+Jimp.<span class="apidocCodeKeywordSpan">distance</span>(image1, image2); // returns a number 0-1, where 0 means the two images
+are perceived to be identical
+```
+
+Jimp also allows the diffing of two Jimp images using [PixelMatch](https://github.com/mapbox/pixelmatch) as follows:
+
+```js
+var diff = Jimp.diff(image1, image2, threshold); // threshold ranges 0-1 (default: 0.1)
+diff.image;   // a Jimp image showing differences
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.phash.prototype.getHash" id="apidoc.element.jimp.phash.prototype.getHash">
+        function <span class="apidocSignatureSpan">jimp.phash.prototype.</span>getHash
+        <span class="apidocSignatureSpan">(img)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHash = function (img) {
+<span class="apidocCodeCommentSpan">    /* 1. Reduce size.
+     * Like Average Hash, pHash starts with a small image.
+     * However, the image is larger than 8x8; 32x32 is a good size.
+     * This is really done to simplify the DCT computation and not
+     * because it is needed to reduce the high frequencies.
+     */
+</span>    img = img.clone().resize(this.size, this.size);
+
+    /* 2. Reduce color.
+     * The image is reduced to a grayscale just to further simplify
+     * the number of computations.
+     */
+    img.grayscale();
+
+    var vals = [];
+
+    for (var x = 0; x &#x3c; img.bitmap.width; x++) {
+        vals[x] = [];
+        for (var y = 0; y &#x3c; img.bitmap.height; y++) {
+            vals[x][y] = intToRGBA(img.getPixelColor(x, y)).b;
+        }
+    }
+
+    /* 3. Compute the DCT.
+     * The DCT separates the image into a collection of frequencies
+     * and scalars. While JPEG uses an 8x8 DCT, this algorithm uses
+     * a 32x32 DCT.
+     */
+    var dctVals = applyDCT(vals, this.size);
+
+    /* 4. Reduce the DCT.
+     * This is the magic step. While the DCT is 32x32, just keep the
+     * top-left 8x8. Those represent the lowest frequencies in the
+     * picture.
+     */
+    /* 5. Compute the average value.
+     * Like the Average Hash, compute the mean DCT value (using only
+     * the 8x8 DCT low-frequency values and excluding the first term
+     * since the DC coefficient can be significantly different from
+     * the other values and will throw off the average).
+     */
+    var total = 0;
+
+    for (var x = 0; x &#x3c; this.smallerSize; x++) {
+        for (var y = 0; y &#x3c; this.smallerSize; y++) {
+            total += dctVals[x][y];
+        }
+    }
+
+    var avg = total / (this.smallerSize * this.smallerSize);
+
+    /* 6. Further reduce the DCT.
+     * This is the magic step. Set the 64 hash bits to 0 or 1
+     * depending on whether each of the 64 DCT values is above or
+     * below the average value. The result doesn&#x27;t tell us the
+     * actual low frequencies; it just tells us the very-rough
+     * relative scale of the frequencies to the mean. The result
+     * will not vary as long as the overall structure of the image
+     * remains the same; this can survive gamma and color histogram
+     * adjustments without a problem.
+     */
+    var hash = &#x22;&#x22;;
+
+	var count = 0;
+    for (var x = 0; x &#x3c; this.smallerSize; x++) {
+        for (var y = 0; y &#x3c; this.smallerSize; y++) {
+            hash += (dctVals[x][y] &#x3e; avg?&#x22;1&#x22;:&#x22;0&#x22;);
+        }
+    }
+
+    return hash;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Calculates the hamming distance of two images based on their perceptual hash
+ * @param img1 a Jimp image to compare
+ * @param img2 a Jimp image to compare
+ * @returns a number ranging from 0 to 1, 0 means they are believed to be identical
+ */
+Jimp.distance = function (img1, img2) {
+    var phash = new ImagePHash();
+    var hash1 = phash.<span class="apidocCodeKeywordSpan">getHash</span>(img1);
+    var hash2 = phash.getHash(img2);
+    return phash.distance(hash1, hash2);
+}
+
+
+// An object representing a bitmap in memory, comprising:
+//  - data: a buffer of the bitmap data
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jimp.resize" id="apidoc.module.jimp.resize">module jimp.resize</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.resize" id="apidoc.element.jimp.resize.resize">
+        function <span class="apidocSignatureSpan">jimp.</span>resize
+        <span class="apidocSignatureSpan">(widthOriginal, heightOriginal, targetWidth, targetHeight, blendAlpha, interpolationPass, resizeCallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Resize(widthOriginal, heightOriginal, targetWidth, targetHeight, blendAlpha, interpolationPass, resizeCallback) {
+    this.widthOriginal = Math.abs(parseInt(widthOriginal) || 0);
+    this.heightOriginal = Math.abs(parseInt(heightOriginal) || 0);
+    this.targetWidth = Math.abs(parseInt(targetWidth) || 0);
+    this.targetHeight = Math.abs(parseInt(targetHeight) || 0);
+    this.colorChannels = (!!blendAlpha) ? 4 : 3;
+    this.interpolationPass = !!interpolationPass;
+    this.resizeCallback = (typeof resizeCallback == &#x22;function&#x22;) ? resizeCallback : function (returnedArray) {};
+    this.targetWidthMultipliedByChannels = this.targetWidth * this.colorChannels;
+    this.originalWidthMultipliedByChannels = this.widthOriginal * this.colorChannels;
+    this.originalHeightMultipliedByChannels = this.heightOriginal * this.colorChannels;
+    this.widthPassResultSize = this.targetWidthMultipliedByChannels * this.heightOriginal;
+    this.finalResultSize = this.targetWidthMultipliedByChannels * this.targetHeight;
+    this.initialize();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var Jimp = require(&#x22;jimp&#x22;);
+
+// open a file called &#x22;lenna.png&#x22;
+Jimp.read(&#x22;lenna.png&#x22;, function (err, lenna) {
+    if (err) throw err;
+    lenna.<span class="apidocCodeKeywordSpan">resize</span>(256, 256)            // resize
+         .quality(60)                 // set JPEG quality
+         .greyscale()                 // set greyscale
+         .write(&#x22;lena-small-bw.jpg&#x22;); // save
+});
+```
+
+Using promises:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jimp.resize.prototype" id="apidoc.module.jimp.resize.prototype">module jimp.resize.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.bypassResizer" id="apidoc.element.jimp.resize.prototype.bypassResizer">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>bypassResizer
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bypassResizer = function (buffer) {
+    //Just return the buffer passsed:
+    return buffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.configurePasses" id="apidoc.element.jimp.resize.prototype.configurePasses">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>configurePasses
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">configurePasses = function () {
+    if (this.widthOriginal == this.targetWidth) {
+        //Bypass the width resizer pass:
+        this.resizeWidth = this.bypassResizer;
+    } else {
+        //Setup the width resizer pass:
+        this.ratioWeightWidthPass = this.widthOriginal / this.targetWidth;
+        if (this.ratioWeightWidthPass &#x3c; 1 &#x26;&#x26; this.interpolationPass) {
+            this.initializeFirstPassBuffers(true);
+            this.resizeWidth = (this.colorChannels == 4) ? this.resizeWidthInterpolatedRGBA : this.resizeWidthInterpolatedRGB;
+        } else {
+            this.initializeFirstPassBuffers(false);
+            this.resizeWidth = (this.colorChannels == 4) ? this.resizeWidthRGBA : this.resizeWidthRGB;
+        }
+    }
+    if (this.heightOriginal == this.targetHeight) {
+        //Bypass the height resizer pass:
+        this.resizeHeight = this.bypassResizer;
+    } else {
+        //Setup the height resizer pass:
+        this.ratioWeightHeightPass = this.heightOriginal / this.targetHeight;
+        if (this.ratioWeightHeightPass &#x3c; 1 &#x26;&#x26; this.interpolationPass) {
+            this.initializeSecondPassBuffers(true);
+            this.resizeHeight = this.resizeHeightInterpolated;
+        } else {
+            this.initializeSecondPassBuffers(false);
+            this.resizeHeight = (this.colorChannels == 4) ? this.resizeHeightRGBA : this.resizeHeightRGB;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.finalResultSize = this.targetWidthMultipliedByChannels * this.targetHeight;
+this.initialize();
+}
+
+Resize.prototype.initialize = function () {
+//Perform some checks:
+if (this.widthOriginal &#x3e; 0 &#x26;&#x26; this.heightOriginal &#x3e; 0 &#x26;&#x26; this.targetWidth &#x3e; 0 &#x26;&#x26; this
+.targetHeight &#x3e; 0) {
+    this.<span class="apidocCodeKeywordSpan">configurePasses</span>();
+} else {
+    throw (new Error(&#x22;Invalid settings specified for the resizer.&#x22;));
+}
+}
+
+Resize.prototype.configurePasses = function () {
+if (this.widthOriginal == this.targetWidth) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.generateFloatBuffer" id="apidoc.element.jimp.resize.prototype.generateFloatBuffer">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>generateFloatBuffer
+        <span class="apidocSignatureSpan">(bufferLength)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateFloatBuffer = function (bufferLength) {
+    //Generate a float32 typed array buffer:
+    try {
+        return new Float32Array(bufferLength);
+    } catch (error) {
+        return [];
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Resize.prototype.bypassResizer = function (buffer) {
+//Just return the buffer passsed:
+return buffer;
+}
+
+Resize.prototype.initializeFirstPassBuffers = function (BILINEARAlgo) {
+//Initialize the internal width pass buffers:
+this.widthBuffer = this.<span class="apidocCodeKeywordSpan">generateFloatBuffer</span>(this.widthPassResultSize);
+if (!BILINEARAlgo) {
+    this.outputWidthWorkBench = this.generateFloatBuffer(this.originalHeightMultipliedByChannels);
+}
+}
+
+Resize.prototype.initializeSecondPassBuffers = function (BILINEARAlgo) {
+//Initialize the internal height pass buffers:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.generateUint8Buffer" id="apidoc.element.jimp.resize.prototype.generateUint8Buffer">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>generateUint8Buffer
+        <span class="apidocSignatureSpan">(bufferLength)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateUint8Buffer = function (bufferLength) {
+    //Generate a uint8 typed array buffer:
+    try {
+        return new Uint8Array(bufferLength);
+    } catch (error) {
+        return [];
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!BILINEARAlgo) {
+    this.outputWidthWorkBench = this.generateFloatBuffer(this.originalHeightMultipliedByChannels);
+}
+}
+
+Resize.prototype.initializeSecondPassBuffers = function (BILINEARAlgo) {
+//Initialize the internal height pass buffers:
+this.heightBuffer = this.<span class="apidocCodeKeywordSpan">generateUint8Buffer</span>(this.finalResultSize);
+if (!BILINEARAlgo) {
+    this.outputHeightWorkBench = this.generateFloatBuffer(this.targetWidthMultipliedByChannels);
+}
+}
+
+Resize.prototype.generateFloatBuffer = function (bufferLength) {
+//Generate a float32 typed array buffer:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.initialize" id="apidoc.element.jimp.resize.prototype.initialize">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>initialize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function () {
+    //Perform some checks:
+    if (this.widthOriginal &#x3e; 0 &#x26;&#x26; this.heightOriginal &#x3e; 0 &#x26;&#x26; this.targetWidth &#x3e; 0 &#x26;&#x26; this.targetHeight &#x3e; 0) {
+        this.configurePasses();
+    } else {
+        throw (new Error(&#x22;Invalid settings specified for the resizer.&#x22;));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.interpolationPass = !!interpolationPass;
+this.resizeCallback = (typeof resizeCallback == &#x22;function&#x22;) ? resizeCallback : function (returnedArray) {};
+this.targetWidthMultipliedByChannels = this.targetWidth * this.colorChannels;
+this.originalWidthMultipliedByChannels = this.widthOriginal * this.colorChannels;
+this.originalHeightMultipliedByChannels = this.heightOriginal * this.colorChannels;
+this.widthPassResultSize = this.targetWidthMultipliedByChannels * this.heightOriginal;
+this.finalResultSize = this.targetWidthMultipliedByChannels * this.targetHeight;
+this.<span class="apidocCodeKeywordSpan">initialize</span>();
+}
+
+Resize.prototype.initialize = function () {
+//Perform some checks:
+if (this.widthOriginal &#x3e; 0 &#x26;&#x26; this.heightOriginal &#x3e; 0 &#x26;&#x26; this.targetWidth &#x3e; 0 &#x26;&#x26; this
+.targetHeight &#x3e; 0) {
+    this.configurePasses();
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.initializeFirstPassBuffers" id="apidoc.element.jimp.resize.prototype.initializeFirstPassBuffers">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>initializeFirstPassBuffers
+        <span class="apidocSignatureSpan">(BILINEARAlgo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initializeFirstPassBuffers = function (BILINEARAlgo) {
+    //Initialize the internal width pass buffers:
+    this.widthBuffer = this.generateFloatBuffer(this.widthPassResultSize);
+    if (!BILINEARAlgo) {
+        this.outputWidthWorkBench = this.generateFloatBuffer(this.originalHeightMultipliedByChannels);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (this.widthOriginal == this.targetWidth) {
+    //Bypass the width resizer pass:
+    this.resizeWidth = this.bypassResizer;
+} else {
+    //Setup the width resizer pass:
+    this.ratioWeightWidthPass = this.widthOriginal / this.targetWidth;
+    if (this.ratioWeightWidthPass &#x3c; 1 &#x26;&#x26; this.interpolationPass) {
+        this.<span class="apidocCodeKeywordSpan">initializeFirstPassBuffers</span>(true);
+        this.resizeWidth = (this.colorChannels == 4) ? this.resizeWidthInterpolatedRGBA : this.resizeWidthInterpolatedRGB;
+    } else {
+        this.initializeFirstPassBuffers(false);
+        this.resizeWidth = (this.colorChannels == 4) ? this.resizeWidthRGBA : this.resizeWidthRGB;
+    }
+}
+if (this.heightOriginal == this.targetHeight) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.initializeSecondPassBuffers" id="apidoc.element.jimp.resize.prototype.initializeSecondPassBuffers">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>initializeSecondPassBuffers
+        <span class="apidocSignatureSpan">(BILINEARAlgo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initializeSecondPassBuffers = function (BILINEARAlgo) {
+    //Initialize the internal height pass buffers:
+    this.heightBuffer = this.generateUint8Buffer(this.finalResultSize);
+    if (!BILINEARAlgo) {
+        this.outputHeightWorkBench = this.generateFloatBuffer(this.targetWidthMultipliedByChannels);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (this.heightOriginal == this.targetHeight) {
+        //Bypass the height resizer pass:
+        this.resizeHeight = this.bypassResizer;
+    } else {
+        //Setup the height resizer pass:
+        this.ratioWeightHeightPass = this.heightOriginal / this.targetHeight;
+        if (this.ratioWeightHeightPass &#x3c; 1 &#x26;&#x26; this.interpolationPass) {
+            this.<span class="apidocCodeKeywordSpan">initializeSecondPassBuffers</span>(true);
+            this.resizeHeight = this.resizeHeightInterpolated;
+        } else {
+            this.initializeSecondPassBuffers(false);
+            this.resizeHeight = (this.colorChannels == 4) ? this.resizeHeightRGBA : this.resizeHeightRGB;
+        }
+    }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.resize" id="apidoc.element.jimp.resize.prototype.resize">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resize
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resize = function (buffer) {
+    this.resizeCallback(this.resizeHeight(this.resizeWidth(buffer)));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var Jimp = require(&#x22;jimp&#x22;);
+
+// open a file called &#x22;lenna.png&#x22;
+Jimp.read(&#x22;lenna.png&#x22;, function (err, lenna) {
+    if (err) throw err;
+    lenna.<span class="apidocCodeKeywordSpan">resize</span>(256, 256)            // resize
+         .quality(60)                 // set JPEG quality
+         .greyscale()                 // set greyscale
+         .write(&#x22;lena-small-bw.jpg&#x22;); // save
+});
+```
+
+Using promises:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.resizeHeightInterpolated" id="apidoc.element.jimp.resize.prototype.resizeHeightInterpolated">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeHeightInterpolated
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resizeHeightInterpolated = function (buffer) {
+    var ratioWeight = this.ratioWeightHeightPass;
+    var weight = 0;
+    var finalOffset = 0;
+    var pixelOffset = 0;
+    var pixelOffsetAccumulated = 0;
+    var pixelOffsetAccumulated2 = 0;
+    var firstWeight = 0;
+    var secondWeight = 0;
+    var outputBuffer = this.heightBuffer;
+    //Handle for only one interpolation input being valid for start calculation:
+    for (; weight &#x3c; 1 / 3; weight += ratioWeight) {
+        for (pixelOffset = 0; pixelOffset &#x3c; this.targetWidthMultipliedByChannels;) {
+            outputBuffer[finalOffset++] = Math.round(buffer[pixelOffset++]);
+        }
+    }
+    //Adjust for overshoot of the last pass&#x27;s counter:
+    weight -= 1 / 3;
+    for (var interpolationHeightSourceReadStop = this.heightOriginal - 1; weight &#x3c; interpolationHeightSourceReadStop; weight +=
+ratioWeight) {
+        //Calculate weightings:
+        secondWeight = weight % 1;
+        firstWeight = 1 - secondWeight;
+        //Interpolate:
+        pixelOffsetAccumulated = Math.floor(weight) * this.targetWidthMultipliedByChannels;
+        pixelOffsetAccumulated2 = pixelOffsetAccumulated + this.targetWidthMultipliedByChannels;
+        for (pixelOffset = 0; pixelOffset &#x3c; this.targetWidthMultipliedByChannels; ++pixelOffset) {
+            outputBuffer[finalOffset++] = Math.round((buffer[pixelOffsetAccumulated++] * firstWeight) + (buffer[pixelOffsetAccumulated2
+++] * secondWeight));
+        }
+    }
+    //Handle for only one interpolation input being valid for end calculation:
+    while (finalOffset &#x3c; this.finalResultSize) {
+        for (pixelOffset = 0, pixelOffsetAccumulated = interpolationHeightSourceReadStop * this.targetWidthMultipliedByChannels;
+pixelOffset &#x3c; this.targetWidthMultipliedByChannels; ++pixelOffset) {
+            outputBuffer[finalOffset++] = Math.round(buffer[pixelOffsetAccumulated++]);
+        }
+    }
+    return outputBuffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.resizeHeightRGB" id="apidoc.element.jimp.resize.prototype.resizeHeightRGB">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeHeightRGB
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resizeHeightRGB = function (buffer) {
+    var ratioWeight = this.ratioWeightHeightPass;
+    var ratioWeightDivisor = 1 / ratioWeight;
+    var weight = 0;
+    var amountToNext = 0;
+    var actualPosition = 0;
+    var currentPosition = 0;
+    var pixelOffset = 0;
+    var outputOffset = 0;
+    var output = this.outputHeightWorkBench;
+    var outputBuffer = this.heightBuffer;
+    do {
+        for (pixelOffset = 0; pixelOffset &#x3c; this.targetWidthMultipliedByChannels;) {
+            output[pixelOffset++] = 0;
+            output[pixelOffset++] = 0;
+            output[pixelOffset++] = 0;
+        }
+        weight = ratioWeight;
+        do {
+            amountToNext = 1 + actualPosition - currentPosition;
+            if (weight &#x3e;= amountToNext) {
+                for (pixelOffset = 0; pixelOffset &#x3c; this.targetWidthMultipliedByChannels;) {
+                    output[pixelOffset++] += buffer[actualPosition++] * amountToNext;
+                    output[pixelOffset++] += buffer[actualPosition++] * amountToNext;
+                    output[pixelOffset++] += buffer[actualPosition++] * amountToNext;
+                }
+                currentPosition = actualPosition;
+                weight -= amountToNext;
+            } else {
+                for (pixelOffset = 0, amountToNext = actualPosition; pixelOffset &#x3c; this.targetWidthMultipliedByChannels;) {
+                    output[pixelOffset++] += buffer[amountToNext++] * weight;
+                    output[pixelOffset++] += buffer[amountToNext++] * weight;
+                    output[pixelOffset++] += buffer[amountToNext++] * weight;
+                }
+                currentPosition += weight;
+                break;
+            }
+        } while (weight &#x3e; 0 &#x26;&#x26; actualPosition &#x3c; this.widthPassResultSize);
+        for (pixelOffset = 0; pixelOffset &#x3c; this.targetWidthMultipliedByChannels;) {
+            outputBuffer[outputOffset++] = Math.round(output[pixelOffset++] * ratioWeightDivisor);
+            outputBuffer[outputOffset++] = Math.round(output[pixelOffset++] * ratioWeightDivisor);
+            outputBuffer[outputOffset++] = Math.round(output[pixelOffset++] * ratioWeightDivisor);
+        }
+    } while (outputOffset &#x3c; this.finalResultSize);
+    return outputBuffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.resizeHeightRGBA" id="apidoc.element.jimp.resize.prototype.resizeHeightRGBA">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeHeightRGBA
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resizeHeightRGBA = function (buffer) {
+    var ratioWeight = this.ratioWeightHeightPass;
+    var ratioWeightDivisor = 1 / ratioWeight;
+    var weight = 0;
+    var amountToNext = 0;
+    var actualPosition = 0;
+    var currentPosition = 0;
+    var pixelOffset = 0;
+    var outputOffset = 0;
+    var output = this.outputHeightWorkBench;
+    var outputBuffer = this.heightBuffer;
+    do {
+        for (pixelOffset = 0; pixelOffset &#x3c; this.targetWidthMultipliedByChannels;) {
+            output[pixelOffset++] = 0;
+            output[pixelOffset++] = 0;
+            output[pixelOffset++] = 0;
+            output[pixelOffset++] = 0;
+        }
+        weight = ratioWeight;
+        do {
+            amountToNext = 1 + actualPosition - currentPosition;
+            if (weight &#x3e;= amountToNext) {
+                for (pixelOffset = 0; pixelOffset &#x3c; this.targetWidthMultipliedByChannels;) {
+                    output[pixelOffset++] += buffer[actualPosition++] * amountToNext;
+                    output[pixelOffset++] += buffer[actualPosition++] * amountToNext;
+                    output[pixelOffset++] += buffer[actualPosition++] * amountToNext;
+                    output[pixelOffset++] += buffer[actualPosition++] * amountToNext;
+                }
+                currentPosition = actualPosition;
+                weight -= amountToNext;
+            } else {
+                for (pixelOffset = 0, amountToNext = actualPosition; pixelOffset &#x3c; this.targetWidthMultipliedByChannels;) {
+                    output[pixelOffset++] += buffer[amountToNext++] * weight;
+                    output[pixelOffset++] += buffer[amountToNext++] * weight;
+                    output[pixelOffset++] += buffer[amountToNext++] * weight;
+                    output[pixelOffset++] += buffer[amountToNext++] * weight;
+                }
+                currentPosition += weight;
+                break;
+            }
+        } while (weight &#x3e; 0 &#x26;&#x26; actualPosition &#x3c; this.widthPassResultSize);
+        for (pixelOffset = 0; pixelOffset &#x3c; this.targetWidthMultipliedByChannels;) {
+            outputBuffer[outputOffset++] = Math.round(output[pixelOffset++] * ratioWeightDivisor);
+            outputBuffer[outputOffset++] = Math.round(output[pixelOffset++] * ratioWeightDivisor);
+            outputBuffer[outputOffset++] = Math.round(output[pixelOffset++] * ratioWeightDivisor);
+            outputBuffer[outputOffset++] = Math.round(output[pixelOffset++] * ratioWeightDivisor);
+        }
+    } while (outputOffset &#x3c; this.finalResultSize);
+    return outputBuffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.resizeWidthInterpolatedRGB" id="apidoc.element.jimp.resize.prototype.resizeWidthInterpolatedRGB">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeWidthInterpolatedRGB
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resizeWidthInterpolatedRGB = function (buffer) {
+    var ratioWeight = this.ratioWeightWidthPass;
+    var weight = 0;
+    var finalOffset = 0;
+    var pixelOffset = 0;
+    var firstWeight = 0;
+    var secondWeight = 0;
+    var outputBuffer = this.widthBuffer;
+    //Handle for only one interpolation input being valid for start calculation:
+    for (var targetPosition = 0; weight &#x3c; 1 / 3; targetPosition += 3, weight += ratioWeight) {
+        for (finalOffset = targetPosition, pixelOffset = 0; finalOffset &#x3c; this.widthPassResultSize; pixelOffset += this.originalWidthMultipliedByChannels
+, finalOffset += this.targetWidthMultipliedByChannels) {
+            outputBuffer[finalOffset] = buffer[pixelOffset];
+            outputBuffer[finalOffset + 1] = buffer[pixelOffset + 1];
+            outputBuffer[finalOffset + 2] = buffer[pixelOffset + 2];
+        }
+    }
+    //Adjust for overshoot of the last pass&#x27;s counter:
+    weight -= 1 / 3;
+    for (var interpolationWidthSourceReadStop = this.widthOriginal - 1; weight &#x3c; interpolationWidthSourceReadStop; targetPosition
+ += 3, weight += ratioWeight) {
+        //Calculate weightings:
+        secondWeight = weight % 1;
+        firstWeight = 1 - secondWeight;
+        //Interpolate:
+        for (finalOffset = targetPosition, pixelOffset = Math.floor(weight) * 3; finalOffset &#x3c; this.widthPassResultSize; pixelOffset
+ += this.originalWidthMultipliedByChannels, finalOffset += this.targetWidthMultipliedByChannels) {
+            outputBuffer[finalOffset] = (buffer[pixelOffset] * firstWeight) + (buffer[pixelOffset + 3] * secondWeight);
+            outputBuffer[finalOffset + 1] = (buffer[pixelOffset + 1] * firstWeight) + (buffer[pixelOffset + 4] * secondWeight);
+            outputBuffer[finalOffset + 2] = (buffer[pixelOffset + 2] * firstWeight) + (buffer[pixelOffset + 5] * secondWeight);
+        }
+    }
+    //Handle for only one interpolation input being valid for end calculation:
+    for (interpolationWidthSourceReadStop = this.originalWidthMultipliedByChannels - 3; targetPosition &#x3c; this.targetWidthMultipliedByChannels
+; targetPosition += 3) {
+        for (finalOffset = targetPosition, pixelOffset = interpolationWidthSourceReadStop; finalOffset &#x3c; this.widthPassResultSize
+; pixelOffset += this.originalWidthMultipliedByChannels, finalOffset += this.targetWidthMultipliedByChannels) {
+            outputBuffer[finalOffset] = buffer[pixelOffset];
+            outputBuffer[finalOffset + 1] = buffer[pixelOffset + 1];
+            outputBuffer[finalOffset + 2] = buffer[pixelOffset + 2];
+        }
+    }
+    return outputBuffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.resizeWidthInterpolatedRGBA" id="apidoc.element.jimp.resize.prototype.resizeWidthInterpolatedRGBA">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeWidthInterpolatedRGBA
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resizeWidthInterpolatedRGBA = function (buffer) {
+    var ratioWeight = this.ratioWeightWidthPass;
+    var weight = 0;
+    var finalOffset = 0;
+    var pixelOffset = 0;
+    var firstWeight = 0;
+    var secondWeight = 0;
+    var outputBuffer = this.widthBuffer;
+    //Handle for only one interpolation input being valid for start calculation:
+    for (var targetPosition = 0; weight &#x3c; 1 / 3; targetPosition += 4, weight += ratioWeight) {
+        for (finalOffset = targetPosition, pixelOffset = 0; finalOffset &#x3c; this.widthPassResultSize; pixelOffset += this.originalWidthMultipliedByChannels
+, finalOffset += this.targetWidthMultipliedByChannels) {
+            outputBuffer[finalOffset] = buffer[pixelOffset];
+            outputBuffer[finalOffset + 1] = buffer[pixelOffset + 1];
+            outputBuffer[finalOffset + 2] = buffer[pixelOffset + 2];
+            outputBuffer[finalOffset + 3] = buffer[pixelOffset + 3];
+        }
+    }
+    //Adjust for overshoot of the last pass&#x27;s counter:
+    weight -= 1 / 3;
+    for (var interpolationWidthSourceReadStop = this.widthOriginal - 1; weight &#x3c; interpolationWidthSourceReadStop; targetPosition
+ += 4, weight += ratioWeight) {
+        //Calculate weightings:
+        secondWeight = weight % 1;
+        firstWeight = 1 - secondWeight;
+        //Interpolate:
+        for (finalOffset = targetPosition, pixelOffset = Math.floor(weight) * 4; finalOffset &#x3c; this.widthPassResultSize; pixelOffset
+ += this.originalWidthMultipliedByChannels, finalOffset += this.targetWidthMultipliedByChannels) {
+            outputBuffer[finalOffset] = (buffer[pixelOffset] * firstWeight) + (buffer[pixelOffset + 4] * secondWeight);
+            outputBuffer[finalOffset + 1] = (buffer[pixelOffset + 1] * firstWeight) + (buffer[pixelOffset + 5] * secondWeight);
+            outputBuffer[finalOffset + 2] = (buffer[pixelOffset + 2] * firstWeight) + (buffer[pixelOffset + 6] * secondWeight);
+            outputBuffer[finalOffset + 3] = (buffer[pixelOffset + 3] * firstWeight) + (buffer[pixelOffset + 7] * secondWeight);
+        }
+    }
+    //Handle for only one interpolation input being valid for end calculation:
+    for (interpolationWidthSourceReadStop = this.originalWidthMultipliedByChannels - 4; targetPosition &#x3c; this.targetWidthMultipliedByChannels
+; targetPosition += 4) {
+        for (finalOffset = targetPosition, pixelOffset = interpolationWidthSourceReadStop; finalOffset &#x3c; this.widthPassResultSize
+; pixelOffset += this.originalWidthMultipliedByChannels, finalOffset += this.targetWidthMultipliedByChannels) {
+            outputBuffer[finalOffset] = buffer[pixelOffset];
+            outputBuffer[finalOffset + 1] = buffer[pixelOffset + 1];
+            outputBuffer[finalOffset + 2] = buffer[pixelOffset + 2];
+            outputBuffer[finalOffset + 3] = buffer[pixelOffset + 3];
+        }
+    }
+    return outputBuffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.resizeWidthRGB" id="apidoc.element.jimp.resize.prototype.resizeWidthRGB">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeWidthRGB
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resizeWidthRGB = function (buffer) {
+    var ratioWeight = this.ratioWeightWidthPass;
+    var ratioWeightDivisor = 1 / ratioWeight;
+    var weight = 0;
+    var amountToNext = 0;
+    var actualPosition = 0;
+    var currentPosition = 0;
+    var line = 0;
+    var pixelOffset = 0;
+    var outputOffset = 0;
+    var nextLineOffsetOriginalWidth = this.originalWidthMultipliedByChannels - 2;
+    var nextLineOffsetTargetWidth = this.targetWidthMultipliedByChannels - 2;
+    var output = this.outputWidthWorkBench;
+    var outputBuffer = this.widthBuffer;
+    do {
+        for (line = 0; line &#x3c; this.originalHeightMultipliedByChannels;) {
+            output[line++] = 0;
+            output[line++] = 0;
+            output[line++] = 0;
+        }
+        weight = ratioWeight;
+        do {
+            amountToNext = 1 + actualPosition - currentPosition;
+            if (weight &#x3e;= amountToNext) {
+                for (line = 0, pixelOffset = actualPosition; line &#x3c; this.originalHeightMultipliedByChannels; pixelOffset += nextLineOffsetOriginalWidth
+) {
+                    output[line++] += buffer[pixelOffset++] * amountToNext;
+                    output[line++] += buffer[pixelOffset++] * amountToNext;
+                    output[line++] += buffer[pixelOffset] * amountToNext;
+                }
+                currentPosition = actualPosition = actualPosition + 3;
+                weight -= amountToNext;
+            } else {
+                for (line = 0, pixelOffset = actualPosition; line &#x3c; this.originalHeightMultipliedByChannels; pixelOffset += nextLineOffsetOriginalWidth
+) {
+                    output[line++] += buffer[pixelOffset++] * weight;
+                    output[line++] += buffer[pixelOffset++] * weight;
+                    output[line++] += buffer[pixelOffset] * weight;
+                }
+                currentPosition += weight;
+                break;
+            }
+        } while (weight &#x3e; 0 &#x26;&#x26; actualPosition &#x3c; this.originalWidthMultipliedByChannels);
+        for (line = 0, pixelOffset = outputOffset; line &#x3c; this.originalHeightMultipliedByChannels; pixelOffset += nextLineOffsetTargetWidth
+) {
+            outputBuffer[pixelOffset++] = output[line++] * ratioWeightDivisor;
+            outputBuffer[pixelOffset++] = output[line++] * ratioWeightDivisor;
+            outputBuffer[pixelOffset] = output[line++] * ratioWeightDivisor;
+        }
+        outputOffset += 3;
+    } while (outputOffset &#x3c; this.targetWidthMultipliedByChannels);
+    return outputBuffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize.prototype.resizeWidthRGBA" id="apidoc.element.jimp.resize.prototype.resizeWidthRGBA">
+        function <span class="apidocSignatureSpan">jimp.resize.prototype.</span>resizeWidthRGBA
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resizeWidthRGBA = function (buffer) {
+    var ratioWeight = this.ratioWeightWidthPass;
+    var ratioWeightDivisor = 1 / ratioWeight;
+    var weight = 0;
+    var amountToNext = 0;
+    var actualPosition = 0;
+    var currentPosition = 0;
+    var line = 0;
+    var pixelOffset = 0;
+    var outputOffset = 0;
+    var nextLineOffsetOriginalWidth = this.originalWidthMultipliedByChannels - 3;
+    var nextLineOffsetTargetWidth = this.targetWidthMultipliedByChannels - 3;
+    var output = this.outputWidthWorkBench;
+    var outputBuffer = this.widthBuffer;
+    do {
+        for (line = 0; line &#x3c; this.originalHeightMultipliedByChannels;) {
+            output[line++] = 0;
+            output[line++] = 0;
+            output[line++] = 0;
+            output[line++] = 0;
+        }
+        weight = ratioWeight;
+        do {
+            amountToNext = 1 + actualPosition - currentPosition;
+            if (weight &#x3e;= amountToNext) {
+                for (line = 0, pixelOffset = actualPosition; line &#x3c; this.originalHeightMultipliedByChannels; pixelOffset += nextLineOffsetOriginalWidth
+) {
+                    output[line++] += buffer[pixelOffset++] * amountToNext;
+                    output[line++] += buffer[pixelOffset++] * amountToNext;
+                    output[line++] += buffer[pixelOffset++] * amountToNext;
+                    output[line++] += buffer[pixelOffset] * amountToNext;
+                }
+                currentPosition = actualPosition = actualPosition + 4;
+                weight -= amountToNext;
+            } else {
+                for (line = 0, pixelOffset = actualPosition; line &#x3c; this.originalHeightMultipliedByChannels; pixelOffset += nextLineOffsetOriginalWidth
+) {
+                    output[line++] += buffer[pixelOffset++] * weight;
+                    output[line++] += buffer[pixelOffset++] * weight;
+                    output[line++] += buffer[pixelOffset++] * weight;
+                    output[line++] += buffer[pixelOffset] * weight;
+                }
+                currentPosition += weight;
+                break;
+            }
+        } while (weight &#x3e; 0 &#x26;&#x26; actualPosition &#x3c; this.originalWidthMultipliedByChannels);
+        for (line = 0, pixelOffset = outputOffset; line &#x3c; this.originalHeightMultipliedByChannels; pixelOffset += nextLineOffsetTargetWidth
+) {
+            outputBuffer[pixelOffset++] = output[line++] * ratioWeightDivisor;
+            outputBuffer[pixelOffset++] = output[line++] * ratioWeightDivisor;
+            outputBuffer[pixelOffset++] = output[line++] * ratioWeightDivisor;
+            outputBuffer[pixelOffset] = output[line++] * ratioWeightDivisor;
+        }
+        outputOffset += 4;
+    } while (outputOffset &#x3c; this.targetWidthMultipliedByChannels);
+    return outputBuffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jimp.resize2" id="apidoc.module.jimp.resize2">module jimp.resize2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize2._interpolate2D" id="apidoc.element.jimp.resize2._interpolate2D">
+        function <span class="apidocSignatureSpan">jimp.resize2.</span>_interpolate2D
+        <span class="apidocSignatureSpan">(src, dst, options, interpolate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_interpolate2D = function (src, dst, options, interpolate) {
+
+    var bufSrc = src.data;
+    var bufDst = dst.data;
+
+    var wSrc = src.width;
+    var hSrc = src.height;
+    //console.log(&#x22;wSrc=&#x22;+wSrc + &#x22;, hSrc=&#x22;+hSrc + &#x22;, srcLen=&#x22;+bufSrc.length);
+
+    var wDst = dst.width;
+    var hDst = dst.height;
+    //console.log(&#x22;wDst=&#x22;+wDst + &#x22;, hDst=&#x22;+hDst + &#x22;, dstLen=&#x22;+bufDst.length);
+
+    // when dst smaller than src/2, interpolate first to a multiple between 0.5 and 1.0 src, then sum squares
+    var wM = Math.max(1, Math.floor(wSrc / wDst));
+    var wDst2 = wDst * wM;
+    var hM = Math.max(1, Math.floor(hSrc / hDst));
+    var hDst2 = hDst * hM;
+    //console.log(&#x22;wM=&#x22;+wM + &#x22;, wDst2=&#x22;+wDst2 + &#x22;, hM=&#x22;+hM + &#x22;, hDst2=&#x22;+hDst2);
+
+    // ===========================================================
+    // Pass 1 - interpolate rows
+    // buf1 has width of dst2 and height of src
+    var buf1 = new Buffer(wDst2 * hSrc * 4);
+    for (var i = 0; i &#x3c; hSrc; i++) {
+        for (var j = 0; j &#x3c; wDst2; j++) {
+            // i in src coords, j in dst coords
+
+            // calculate x in src coords
+            // this interpolation requires 4 sample points and the two inner ones must be real
+            // the outer points can be fudged for the edges.
+            // therefore (wSrc-1)/wDst2
+            var x = j * (wSrc-1) / wDst2;
+            var xPos = Math.floor(x);
+            var t = x - xPos;
+            var srcPos = (i * wSrc + xPos) * 4;
+
+            var buf1Pos = (i * wDst2 + j) * 4;
+            for (var k = 0; k &#x3c; 4; k++) {
+                var kPos = srcPos + k;
+                var x0 = (xPos &#x3e; 0) ? bufSrc[kPos - 4] : 2*bufSrc[kPos]-bufSrc[kPos+4];
+                var x1 = bufSrc[kPos];
+                var x2 = bufSrc[kPos + 4];
+                var x3 = (xPos &#x3c; wSrc - 2) ? bufSrc[kPos + 8] : 2*bufSrc[kPos + 4]-bufSrc[kPos];
+                buf1[buf1Pos+k] = interpolate(x0,x1,x2,x3,t);
+            }
+        }
+    }
+    //this._writeFile(wDst2, hSrc, buf1, &#x22;out/buf1.jpg&#x22;);
+
+    // ===========================================================
+    // Pass 2 - interpolate columns
+    // buf2 has width and height of dst2
+    var buf2 = new Buffer(wDst2 * hDst2 * 4);
+    for (var i = 0; i &#x3c; hDst2; i++) {
+        for (var j = 0; j &#x3c; wDst2; j++) {
+            // i&#x26;j in dst2 coords
+
+            // calculate y in buf1 coords
+            // this interpolation requires 4 sample points and the two inner ones must be real
+            // the outer points can be fudged for the edges.
+            // therefore (hSrc-1)/hDst2
+            var y = i * (hSrc-1) / hDst2;
+            var yPos = Math.floor(y);
+            var t = y - yPos;
+            var buf1Pos = (yPos * wDst2 + j) * 4;
+            var buf2Pos = (i * wDst2 + j) * 4;
+            for (var k = 0; k &#x3c; 4; k++) {
+                var kPos = buf1Pos + k;
+                var y0 = (yPos &#x3e; 0) ? buf1[kPos - wDst2*4] : 2*buf1[kPos]-buf1[kPos + wDst2*4];
+                var y1 = buf1[kPos];
+                var y2 = buf1[kPos + wDst2*4];
+                var y3 = (yPos &#x3c; hSrc-2) ? buf1[kPos + wDst2*8] : 2*buf1[kPos + wDst2*4]-buf1[kPos];
+
+                buf2[buf2Pos + k] = interpolate(y0,y1,y2,y3,t);
+            }
+        }
+    }
+    //this._writeFile(wDst2, hDst2, buf2, &#x22;out/buf2.jpg&#x22;);
+
+    // ===========================================================
+    // Pass 3 - scale to dst
+    var m = wM * hM;
+    if (m &#x3e; 1) {
+        for (var i = 0; i &#x3c; hDst; i++) {
+            for (var j = 0; j &#x3c; wDst; j++) {
+                // i&#x26;j in dst bounded coords
+                var r = 0;
+                var g = 0;
+                var b = 0;
+                var a = 0;
+                for (var y = 0; y &#x3c; hM; y++) {
+                    var yPos = i * hM + y;
+                    for (var x = 0; x &#x3c; wM; x++) {
+                        var xPos = j * wM + x;
+                        var xyPos = (yPos * wDst2 + xPos) * 4;
+                        r += buf2[xyPos];
+                        g += buf2[xyPos+1];
+                        b += buf2[xyPos+2]; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var interpolateCubic = function(x0, x1, x2, x3, t) {
+        var a0 = x3 - x2 - x0 + x1;
+        var a1 = x0 - x1 - a0;
+        var a2 = x2 - x0;
+        var a3 = x1;
+        return Math.max(0,Math.min(255,(a0 * (t * t * t)) + (a1 * (t * t)) + (a2 * t) + (a3)));
+    }
+    return this.<span class="apidocCodeKeywordSpan">_interpolate2D</span>(src, dst, options, interpolateCubic);
+},
+
+hermiteInterpolation: function(src, dst, options) {
+    var interpolateHermite = function(x0, x1, x2, x3, t)
+    {
+        var c0 = x1;
+        var c1 = 0.5 * (x2 - x0);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize2.bezierInterpolation" id="apidoc.element.jimp.resize2.bezierInterpolation">
+        function <span class="apidocSignatureSpan">jimp.resize2.</span>bezierInterpolation
+        <span class="apidocSignatureSpan">(src, dst, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bezierInterpolation = function (src, dst, options) {
+    // between 2 points y(n), y(n+1), use next points out, y(n-1), y(n+2)
+    // to predict control points (a &#x26; b) to be placed at n+0.5
+    //  ya(n) = y(n) + (y(n+1)-y(n-1))/4
+    //  yb(n) = y(n+1) - (y(n+2)-y(n))/4
+    // then use std bezier to interpolate [n,n+1)
+    //  y(n+t) = y(n)*(1-t)^3 + 3 * ya(n)*(1-t)^2*t + 3 * yb(n)*(1-t)*t^2 + y(n+1)*t^3
+    //  note the 3* factor for the two control points
+    // for edge cases, can choose:
+    //  y(-1) = y(0) - 2*(y(1)-y(0))
+    //  y(w) = y(w-1) + 2*(y(w-1)-y(w-2))
+    // but can go with y(-1) = y(0) and y(w) = y(w-1)
+    var interpolateBezier = function(x0, x1, x2, x3, t) {
+        // x1, x2 are the knots, use x0 and x3 to calculate control points
+        var cp1 = x1 + (x2-x0)/4;
+        var cp2 = x2 - (x3-x1)/4;
+        var nt = 1-t;
+        var c0 =      x1 * nt * nt * nt;
+        var c1 = 3 * cp1 * nt * nt *  t;
+        var c2 = 3 * cp2 * nt *  t *  t;
+        var c3 =      x2 *  t *  t *  t;
+        return Math.max(0,Math.min(255,Math.round(c0 + c1 + c2 + c3)));
+    }
+    return this._interpolate2D(src, dst, options, interpolateBezier);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize2.bicubicInterpolation" id="apidoc.element.jimp.resize2.bicubicInterpolation">
+        function <span class="apidocSignatureSpan">jimp.resize2.</span>bicubicInterpolation
+        <span class="apidocSignatureSpan">(src, dst, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bicubicInterpolation = function (src, dst, options) {
+    var interpolateCubic = function(x0, x1, x2, x3, t) {
+        var a0 = x3 - x2 - x0 + x1;
+        var a1 = x0 - x1 - a0;
+        var a2 = x2 - x0;
+        var a3 = x1;
+        return Math.max(0,Math.min(255,(a0 * (t * t * t)) + (a1 * (t * t)) + (a2 * t) + (a3)));
+    }
+    return this._interpolate2D(src, dst, options, interpolateCubic);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize2.bilinearInterpolation" id="apidoc.element.jimp.resize2.bilinearInterpolation">
+        function <span class="apidocSignatureSpan">jimp.resize2.</span>bilinearInterpolation
+        <span class="apidocSignatureSpan">(src, dst, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bilinearInterpolation = function (src, dst, options) {
+
+    var wSrc = src.width;
+    var hSrc = src.height;
+    //console.log(&#x22;wSrc=&#x22;+wSrc + &#x22;, hSrc=&#x22;+hSrc);
+
+    var wDst = dst.width;
+    var hDst = dst.height;
+    //console.log(&#x22;wDst=&#x22;+wDst + &#x22;, hDst=&#x22;+hDst);
+
+    var bufSrc = src.data;
+    var bufDst = dst.data;
+
+    var interpolate = function(k, kMin, vMin, kMax, vMax) {
+        // special case - k is integer
+        if (kMin === kMax) {
+            return vMin;
+        }
+
+        return Math.round((k - kMin) * vMax + (kMax - k) * vMin);
+    };
+    var assign = function(pos, offset, x, xMin, xMax, y, yMin, yMax) {
+        var posMin = (yMin * wSrc + xMin) * 4 + offset;
+        var posMax = (yMin * wSrc + xMax) * 4 + offset;
+        var vMin = interpolate(x, xMin, bufSrc[posMin], xMax, bufSrc[posMax]);
+
+        // special case, y is integer
+        if (yMax === yMin) {
+            bufDst[pos+offset] = vMin;
+        } else {
+            posMin = (yMax * wSrc + xMin) * 4 + offset;
+            posMax = (yMax * wSrc + xMax) * 4 + offset;
+            var vMax = interpolate(x, xMin, bufSrc[posMin], xMax, bufSrc[posMax]);
+
+            bufDst[pos+offset] = interpolate(y, yMin, vMin, yMax, vMax);
+        }
+    }
+
+    for (var i = 0; i &#x3c; hDst; i++) {
+        for (var j = 0; j &#x3c; wDst; j++) {
+            var posDst = (i * wDst + j) * 4;
+
+            // x &#x26; y in src coordinates
+            var x = j * wSrc / wDst;
+            var xMin = Math.floor(x);
+            var xMax = Math.min(Math.ceil(x), wSrc-1);
+
+            var y = i * hSrc / hDst;
+            var yMin = Math.floor(y);
+            var yMax = Math.min(Math.ceil(y), hSrc-1);
+
+            assign(posDst, 0, x, xMin, xMax, y, yMin, yMax);
+            assign(posDst, 1, x, xMin, xMax, y, yMin, yMax);
+            assign(posDst, 2, x, xMin, xMax, y, yMin, yMax);
+            assign(posDst, 3, x, xMin, xMax, y, yMin, yMax);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize2.hermiteInterpolation" id="apidoc.element.jimp.resize2.hermiteInterpolation">
+        function <span class="apidocSignatureSpan">jimp.resize2.</span>hermiteInterpolation
+        <span class="apidocSignatureSpan">(src, dst, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hermiteInterpolation = function (src, dst, options) {
+    var interpolateHermite = function(x0, x1, x2, x3, t)
+    {
+        var c0 = x1;
+        var c1 = 0.5 * (x2 - x0);
+        var c2 = x0 - (2.5 * x1) + (2 * x2) - (0.5 * x3);
+        var c3 = (0.5 * (x3 - x0)) + (1.5 * (x1 - x2));
+        return  Math.max(0,Math.min(255,Math.round((((((c3 * t) + c2) * t) + c1) * t) + c0)));
+    }
+    return this._interpolate2D(src, dst, options, interpolateHermite);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.resize2.nearestNeighbor" id="apidoc.element.jimp.resize2.nearestNeighbor">
+        function <span class="apidocSignatureSpan">jimp.resize2.</span>nearestNeighbor
+        <span class="apidocSignatureSpan">(src, dst, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nearestNeighbor = function (src, dst, options) {
+
+    var wSrc = src.width;
+    var hSrc = src.height;
+    //console.log(&#x22;wSrc=&#x22;+wSrc + &#x22;, hSrc=&#x22;+hSrc);
+
+    var wDst = dst.width;
+    var hDst = dst.height;
+    //console.log(&#x22;wDst=&#x22;+wDst + &#x22;, hDst=&#x22;+hDst);
+
+    var bufSrc = src.data;
+    var bufDst = dst.data;
+
+    for (var i = 0; i &#x3c; hDst; i++) {
+        for (var j = 0; j &#x3c; wDst; j++) {
+            var posDst = (i * wDst + j) * 4;
+
+            var iSrc = Math.round(i * hSrc / hDst);
+            var jSrc = Math.round(j * wSrc / wDst);
+            var posSrc = (iSrc * wSrc + jSrc) * 4;
+
+            bufDst[posDst++] = bufSrc[posSrc++];
+            bufDst[posDst++] = bufSrc[posSrc++];
+            bufDst[posDst++] = bufSrc[posSrc++];
+            bufDst[posDst++] = bufSrc[posSrc++];
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>

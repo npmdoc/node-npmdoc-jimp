@@ -1,68 +1,68 @@
 <svg height="1038" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="1038" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-08 07:42:32 +0000  2297770 bytes  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-08 07:42:32 +0000     1079 bytes  LICENSE</tspan>
-<tspan x="10" y="58">  2.  2017-04-08 07:42:32 +0000    16409 bytes  README.md</tspan>
-<tspan x="10" y="74">  3.  2017-04-08 07:42:32 +0000     2237 bytes  browser/README.md</tspan>
-<tspan x="10" y="90">  4.  2017-04-08 07:42:32 +0000     1958 bytes  browser/browserify-build.sh</tspan>
-<tspan x="10" y="106">  5.  2017-04-08 07:42:32 +0000      862 bytes  browser/examples/example1.html</tspan>
-<tspan x="10" y="122">  6.  2017-04-08 07:42:32 +0000      544 bytes  browser/examples/example2.html</tspan>
-<tspan x="10" y="138">  7.  2017-04-08 07:42:32 +0000     1118 bytes  browser/examples/example3.html</tspan>
-<tspan x="10" y="154">  8.  2017-04-08 07:42:32 +0000      458 bytes  browser/examples/jimp-worker.js</tspan>
-<tspan x="10" y="170">  9.  2017-04-08 07:42:32 +0000   473831 bytes  browser/examples/lenna.png</tspan>
-<tspan x="10" y="186"> 10.  2017-04-08 07:42:32 +0000   666380 bytes  browser/lib/jimp.js</tspan>
-<tspan x="10" y="202"> 11.  2017-04-08 07:42:32 +0000   327997 bytes  browser/lib/jimp.min.js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-08 07:42:32 +0000     3981 bytes  browser/src/jimp-wrapper.js</tspan>
-<tspan x="10" y="234"> 13.  2017-04-08 07:42:32 +0000      344 bytes  example.js</tspan>
+<tspan x="10" y="26">  0.  2017-04-08 07:44:10 +0000  2297770 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-08 07:44:10 +0000     1079 bytes  LICENSE</tspan>
+<tspan x="10" y="58">  2.  2017-04-08 07:44:10 +0000    16409 bytes  README.md</tspan>
+<tspan x="10" y="74">  3.  2017-04-08 07:44:10 +0000     2237 bytes  browser/README.md</tspan>
+<tspan x="10" y="90">  4.  2017-04-08 07:44:10 +0000     1958 bytes  browser/browserify-build.sh</tspan>
+<tspan x="10" y="106">  5.  2017-04-08 07:44:10 +0000      862 bytes  browser/examples/example1.html</tspan>
+<tspan x="10" y="122">  6.  2017-04-08 07:44:10 +0000      544 bytes  browser/examples/example2.html</tspan>
+<tspan x="10" y="138">  7.  2017-04-08 07:44:10 +0000     1118 bytes  browser/examples/example3.html</tspan>
+<tspan x="10" y="154">  8.  2017-04-08 07:44:10 +0000      458 bytes  browser/examples/jimp-worker.js</tspan>
+<tspan x="10" y="170">  9.  2017-04-08 07:44:10 +0000   473831 bytes  browser/examples/lenna.png</tspan>
+<tspan x="10" y="186"> 10.  2017-04-08 07:44:10 +0000   666380 bytes  browser/lib/jimp.js</tspan>
+<tspan x="10" y="202"> 11.  2017-04-08 07:44:10 +0000   327997 bytes  browser/lib/jimp.min.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-08 07:44:10 +0000     3981 bytes  browser/src/jimp-wrapper.js</tspan>
+<tspan x="10" y="234"> 13.  2017-04-08 07:44:10 +0000      344 bytes  example.js</tspan>
 <tspan x="10" y="250">ls: cannot access fonts/open-sans/Apache: No such file or directory</tspan>
 <tspan x="10" y="266">ls: cannot access License.txt: No such file or directory</tspan>
-<tspan x="10" y="282"> 14.  2017-04-08 07:42:32 +0000      344 bytes  fonts/open-sans/Apache License.txt</tspan>
-<tspan x="10" y="298"> 15.  2017-04-08 07:42:32 +0000    27698 bytes  fonts/open-sans/open-sans-128-black/open-sans-12\</tspan>
+<tspan x="10" y="282"> 14.  2017-04-08 07:44:10 +0000      344 bytes  fonts/open-sans/Apache License.txt</tspan>
+<tspan x="10" y="298"> 15.  2017-04-08 07:44:10 +0000    27698 bytes  fonts/open-sans/open-sans-128-black/open-sans-12\</tspan>
 <tspan x="10" y="314">8-black.fnt</tspan>
-<tspan x="10" y="330"> 16.  2017-04-08 07:42:32 +0000   113367 bytes  fonts/open-sans/open-sans-128-black/open-sans-12\</tspan>
+<tspan x="10" y="330"> 16.  2017-04-08 07:44:10 +0000   113367 bytes  fonts/open-sans/open-sans-128-black/open-sans-12\</tspan>
 <tspan x="10" y="346">8-black.png</tspan>
-<tspan x="10" y="362"> 17.  2017-04-08 07:42:32 +0000    27698 bytes  fonts/open-sans/open-sans-128-white/open-sans-12\</tspan>
+<tspan x="10" y="362"> 17.  2017-04-08 07:44:10 +0000    27698 bytes  fonts/open-sans/open-sans-128-white/open-sans-12\</tspan>
 <tspan x="10" y="378">8-white.fnt</tspan>
-<tspan x="10" y="394"> 18.  2017-04-08 07:42:32 +0000   121780 bytes  fonts/open-sans/open-sans-128-white/open-sans-12\</tspan>
+<tspan x="10" y="394"> 18.  2017-04-08 07:44:10 +0000   121780 bytes  fonts/open-sans/open-sans-128-white/open-sans-12\</tspan>
 <tspan x="10" y="410">8-white.png</tspan>
-<tspan x="10" y="426"> 19.  2017-04-08 07:42:32 +0000    26699 bytes  fonts/open-sans/open-sans-16-black/open-sans-16-\</tspan>
+<tspan x="10" y="426"> 19.  2017-04-08 07:44:10 +0000    26699 bytes  fonts/open-sans/open-sans-16-black/open-sans-16-\</tspan>
 <tspan x="10" y="442">black.fnt</tspan>
-<tspan x="10" y="458"> 20.  2017-04-08 07:42:32 +0000     8914 bytes  fonts/open-sans/open-sans-16-black/open-sans-16-\</tspan>
+<tspan x="10" y="458"> 20.  2017-04-08 07:44:10 +0000     8914 bytes  fonts/open-sans/open-sans-16-black/open-sans-16-\</tspan>
 <tspan x="10" y="474">black.png</tspan>
-<tspan x="10" y="490"> 21.  2017-04-08 07:42:32 +0000    26699 bytes  fonts/open-sans/open-sans-16-white/open-sans-16-\</tspan>
+<tspan x="10" y="490"> 21.  2017-04-08 07:44:10 +0000    26699 bytes  fonts/open-sans/open-sans-16-white/open-sans-16-\</tspan>
 <tspan x="10" y="506">white.fnt</tspan>
-<tspan x="10" y="522"> 22.  2017-04-08 07:42:32 +0000     9154 bytes  fonts/open-sans/open-sans-16-white/open-sans-16-\</tspan>
+<tspan x="10" y="522"> 22.  2017-04-08 07:44:10 +0000     9154 bytes  fonts/open-sans/open-sans-16-white/open-sans-16-\</tspan>
 <tspan x="10" y="538">white.png</tspan>
-<tspan x="10" y="554"> 23.  2017-04-08 07:42:32 +0000    27093 bytes  fonts/open-sans/open-sans-32-black/open-sans-32-\</tspan>
+<tspan x="10" y="554"> 23.  2017-04-08 07:44:10 +0000    27093 bytes  fonts/open-sans/open-sans-32-black/open-sans-32-\</tspan>
 <tspan x="10" y="570">black.fnt</tspan>
-<tspan x="10" y="586"> 24.  2017-04-08 07:42:32 +0000    20224 bytes  fonts/open-sans/open-sans-32-black/open-sans-32-\</tspan>
+<tspan x="10" y="586"> 24.  2017-04-08 07:44:10 +0000    20224 bytes  fonts/open-sans/open-sans-32-black/open-sans-32-\</tspan>
 <tspan x="10" y="602">black.png</tspan>
-<tspan x="10" y="618"> 25.  2017-04-08 07:42:32 +0000    27093 bytes  fonts/open-sans/open-sans-32-white/open-sans-32-\</tspan>
+<tspan x="10" y="618"> 25.  2017-04-08 07:44:10 +0000    27093 bytes  fonts/open-sans/open-sans-32-white/open-sans-32-\</tspan>
 <tspan x="10" y="634">white.fnt</tspan>
-<tspan x="10" y="650"> 26.  2017-04-08 07:42:32 +0000    21153 bytes  fonts/open-sans/open-sans-32-white/open-sans-32-\</tspan>
+<tspan x="10" y="650"> 26.  2017-04-08 07:44:10 +0000    21153 bytes  fonts/open-sans/open-sans-32-white/open-sans-32-\</tspan>
 <tspan x="10" y="666">white.png</tspan>
-<tspan x="10" y="682"> 27.  2017-04-08 07:42:32 +0000    27404 bytes  fonts/open-sans/open-sans-64-black/open-sans-64-\</tspan>
+<tspan x="10" y="682"> 27.  2017-04-08 07:44:10 +0000    27404 bytes  fonts/open-sans/open-sans-64-black/open-sans-64-\</tspan>
 <tspan x="10" y="698">black.fnt</tspan>
-<tspan x="10" y="714"> 28.  2017-04-08 07:42:32 +0000    48250 bytes  fonts/open-sans/open-sans-64-black/open-sans-64-\</tspan>
+<tspan x="10" y="714"> 28.  2017-04-08 07:44:10 +0000    48250 bytes  fonts/open-sans/open-sans-64-black/open-sans-64-\</tspan>
 <tspan x="10" y="730">black.png</tspan>
-<tspan x="10" y="746"> 29.  2017-04-08 07:42:32 +0000    27404 bytes  fonts/open-sans/open-sans-64-white/open-sans-64-\</tspan>
+<tspan x="10" y="746"> 29.  2017-04-08 07:44:10 +0000    27404 bytes  fonts/open-sans/open-sans-64-white/open-sans-64-\</tspan>
 <tspan x="10" y="762">white.fnt</tspan>
-<tspan x="10" y="778"> 30.  2017-04-08 07:42:32 +0000    51522 bytes  fonts/open-sans/open-sans-64-white/open-sans-64-\</tspan>
+<tspan x="10" y="778"> 30.  2017-04-08 07:44:10 +0000    51522 bytes  fonts/open-sans/open-sans-64-white/open-sans-64-\</tspan>
 <tspan x="10" y="794">white.png</tspan>
-<tspan x="10" y="810"> 31.  2017-04-08 07:42:32 +0000    26341 bytes  fonts/open-sans/open-sans-8-black/open-sans-8-bl\</tspan>
+<tspan x="10" y="810"> 31.  2017-04-08 07:44:10 +0000    26341 bytes  fonts/open-sans/open-sans-8-black/open-sans-8-bl\</tspan>
 <tspan x="10" y="826">ack.fnt</tspan>
-<tspan x="10" y="842"> 32.  2017-04-08 07:42:32 +0000     3495 bytes  fonts/open-sans/open-sans-8-black/open-sans-8-bl\</tspan>
+<tspan x="10" y="842"> 32.  2017-04-08 07:44:10 +0000     3495 bytes  fonts/open-sans/open-sans-8-black/open-sans-8-bl\</tspan>
 <tspan x="10" y="858">ack.png</tspan>
-<tspan x="10" y="874"> 33.  2017-04-08 07:42:32 +0000    26341 bytes  fonts/open-sans/open-sans-8-white/open-sans-8-wh\</tspan>
+<tspan x="10" y="874"> 33.  2017-04-08 07:44:10 +0000    26341 bytes  fonts/open-sans/open-sans-8-white/open-sans-8-wh\</tspan>
 <tspan x="10" y="890">ite.fnt</tspan>
-<tspan x="10" y="906"> 34.  2017-04-08 07:42:32 +0000     3691 bytes  fonts/open-sans/open-sans-8-white/open-sans-8-wh\</tspan>
+<tspan x="10" y="906"> 34.  2017-04-08 07:44:10 +0000     3691 bytes  fonts/open-sans/open-sans-8-white/open-sans-8-wh\</tspan>
 <tspan x="10" y="922">ite.png</tspan>
-<tspan x="10" y="938"> 35.  2017-04-08 07:42:32 +0000    85955 bytes  index.js</tspan>
-<tspan x="10" y="954"> 36.  2017-04-08 07:42:32 +0000     3227 bytes  package.json</tspan>
-<tspan x="10" y="970"> 37.  2017-04-08 07:42:32 +0000     5567 bytes  phash.js</tspan>
-<tspan x="10" y="986"> 38.  2017-04-08 07:42:32 +0000    21703 bytes  resize.js</tspan>
-<tspan x="10" y="1002"> 39.  2017-04-08 07:42:32 +0000    11582 bytes  resize2.js</tspan>
-<tspan x="10" y="1018"> 40.  2017-04-08 07:42:32 +0000      174 bytes  server.js</tspan>
+<tspan x="10" y="938"> 35.  2017-04-08 07:44:10 +0000    85955 bytes  index.js</tspan>
+<tspan x="10" y="954"> 36.  2017-04-08 07:44:10 +0000     3227 bytes  package.json</tspan>
+<tspan x="10" y="970"> 37.  2017-04-08 07:44:10 +0000     5567 bytes  phash.js</tspan>
+<tspan x="10" y="986"> 38.  2017-04-08 07:44:10 +0000    21703 bytes  resize.js</tspan>
+<tspan x="10" y="1002"> 39.  2017-04-08 07:44:10 +0000    11582 bytes  resize2.js</tspan>
+<tspan x="10" y="1018"> 40.  2017-04-08 07:44:10 +0000      174 bytes  server.js</tspan>
 </text>
 </svg>

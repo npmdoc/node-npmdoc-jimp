@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.jimp.jimp">
+            function <span class="apidocSignatureSpan"></span>jimp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.jimp.diff">
             function <span class="apidocSignatureSpan">jimp.</span>diff
             <span class="apidocSignatureSpan">(img1, img2, threshold)</span>
@@ -609,6 +618,127 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.jimp" id="apidoc.module.jimp">module jimp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jimp.jimp" id="apidoc.element.jimp.jimp">
+        function <span class="apidocSignatureSpan"></span>jimp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Jimp() {
+    if (&#x22;number&#x22; == typeof arguments[0] &#x26;&#x26; &#x22;number&#x22; == typeof arguments[1]) {
+        // create a new image
+        var w = arguments[0];
+        var h = arguments[1];
+        var cb = arguments[2];
+
+        if (&#x22;number&#x22; == typeof arguments[2]) {
+            this._background = arguments[2];
+            var cb = arguments[3];
+        }
+
+        if (&#x22;undefined&#x22; == typeof cb) cb = noop;
+        if (&#x22;function&#x22; != typeof cb)
+            return throwError.call(this, &#x22;cb must be a function&#x22;, cb);
+
+        this.bitmap = {
+            data: new Buffer(w * h * 4),
+            width: w,
+            height: h
+        };
+
+        for (var i = 0; i &#x3c; this.bitmap.data.length; i=i+4) {
+            this.bitmap.data.writeUInt32BE(this._background, i);
+        }
+
+        cb.call(this, null, this);
+    } else if (&#x22;object&#x22; == typeof arguments[0] &#x26;&#x26; arguments[0].constructor == Jimp) {
+        // clone an existing Jimp
+        var original = arguments[0];
+        var cb = arguments[1];
+
+        if (&#x22;undefined&#x22; == typeof cb) cb = noop;
+        if (&#x22;function&#x22; != typeof cb)
+            return throwError.call(this, &#x22;cb must be a function&#x22;, cb);
+
+        var bitmap = new Buffer(original.bitmap.data.length);
+        original.scan(0, 0, original.bitmap.width, original.bitmap.height, function (x, y, idx) {
+            var data = original.bitmap.data.readUInt32BE(idx, true);
+            bitmap.writeUInt32BE(data, idx, true);
+        });
+
+        this.bitmap = {
+            data: bitmap,
+            width: original.bitmap.width,
+            height: original.bitmap.height
+        };
+
+        this._quality = original._quality;
+        this._deflateLevel = original._deflateLevel;
+        this._deflateStrategy = original._deflateStrategy;
+        this._filterType = original._filterType;
+        this._rgba = original._rgba;
+        this._background = original._background;
+
+        cb.call(this, null, this);
+    } else if (URLRegEx({exact: true}).test(arguments[0])) {
+        // read from a URL
+        var url = arguments[0];
+        var cb = arguments[1];
+
+        if (&#x22;undefined&#x22; == typeof cb) cb = noop;
+        if (&#x22;function&#x22; != typeof cb)
+            return throwError.call(this, &#x22;cb must be a function&#x22;, cb);
+
+        var that = this;
+        Request(url, function (err, response, data) {
+            if (err) return throwError.call(that, err, cb);
+            if (&#x22;object&#x22; == typeof data &#x26;&#x26; Buffer.isBuffer(data)) {
+                var mime = getMIMEFromBuffer(data);
+                if (&#x22;string&#x22; != typeof mime)
+                    return throwError.call(that, &#x22;Could not find MIME for Buffer &#x3c;&#x22; + url + &#x22;&#x3e; (HTTP: &#x22; + response.statusCode + &#x22;)&#x22;,
+cb);
+                parseBitmap.call(that, data, mime, cb);
+            } else return throwError.call(that, &#x22;Could not load Buffer from URL &#x3c;&#x22; + url + &#x22;&#x3e; (HTTP: &#x22; + response.statusCode + &#x22;)&#x22;,
+cb);
+        });
+    } else if (&#x22;string&#x22; == typeof arguments[0]) {
+        // read from a path
+        var path = arguments[0];
+        var cb = arguments[1];
+
+        if (&#x22;undefined&#x22; == typeof cb) cb = noop;
+        if (&#x22;function&#x22; != typeof cb)
+            return throwError.call(this, &#x22;cb must be a function&#x22;, cb);
+
+        var that = this;
+        getMIMEFromPath(path, function (err, mime) {
+            FS.readFile(path, function (err, data) {
+                if (err) return throwError.call(that, err, cb);
+                parseBitmap.call(that, data, mime, cb);
+            });
+        });
+    } else if (&#x22;object&#x22; == typeof arguments[0]) {
+        // read from a buffer
+        var data = arguments[0];
+        var mime = getMIMEFromBuffer(data);
+        var cb = arguments[1];
+
+        if (!Buffer.isBuffer(data))
+            return throwError.call(this, &#x22;data must be a Buffer&#x22;, cb);
+        if (&#x22;string&#x22; != typeof mime)
+            return throwError.call(this, &#x22;mime must be a string&#x22;, cb);
+        if (&#x22;function&#x22; != typeof cb)
+            return throwError.call(this, &#x22;cb must be a function&#x22;, cb);
+
+        parseBitmap.call(this, data, mime, cb);
+    } else {
+        return throwError.call ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>

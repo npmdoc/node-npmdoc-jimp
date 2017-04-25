@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "jimp",
-    "description": "#### api documentation for  [jimp (v0.2.27)](https://github.com/oliver-moran/jimp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-jimp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jimp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jimp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jimp)",
+    "description": "#### basic api documentation for  [jimp (v0.2.27)](https://github.com/oliver-moran/jimp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-jimp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jimp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jimp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jimp)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "jimp": "*",
@@ -36,5 +36,5 @@
         "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.4"
+    "version": "2017.4.25"
 }

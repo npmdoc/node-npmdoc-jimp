@@ -1,6 +1,6 @@
 # npmdoc-jimp
 
-#### api documentation for  [jimp (v0.2.27)](https://github.com/oliver-moran/jimp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-jimp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jimp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jimp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jimp)
+#### basic api documentation for  [jimp (v0.2.27)](https://github.com/oliver-moran/jimp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-jimp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jimp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jimp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jimp)
 
 #### An image processing library written entirely in JavaScript (i.e. zero external or native dependencies).
 
@@ -95,7 +95,8 @@
         "test": "./test/tests.sh"
     },
     "tonicExampleFilename": "example.js",
-    "version": "0.2.27"
+    "version": "0.2.27",
+    "bin": {}
 }
 ```
 
